@@ -40,7 +40,7 @@
 - Nom de marque + logo à déposer à l'INPI (~200€)
 - Le nom de l'entreprise n'est pas forcément unique (mais il faut essayer qu'il le soit)
 
-## Status juridiques (non exhaustif)
+## Statuts juridiques (non exhaustif)
 - SA (Société Anonyme, statut des grosse boîtes)
 - SàRL (Société à responsabilités limitées)
 - EURL (Entreprise Unipersonnelle à responsabilités limitées)
@@ -100,3 +100,49 @@ Comment choisir
 - SASU
     - URSSAF si salaire
     - Rien sinon (*risque d'être patché bientôt*)
+- EIRL/EURL
+    - URSSAF
+    - CIPAV
+- AE
+    - URSSAF
+
+## Création
+- EIRL
+    - Déclaration d'affectation du patrimoine auprès du CFE (Centre des Formalités des Entreprises)
+    - Enregistrement au registre spécial des EIRL auprès du Greffe
+    - Ouverture d'un compte en banque dédié obligatoire
+- SA/SAS
+    - Rédaction des statuts
+    - Remplir le formulaire M0 (création d'entreprise) *3
+    - Ouvrir un compte bancaire pour l'entreprise
+        - Bloquer les fonds pour le capital social
+        - Obtenir une attestation du blocage de ces fonds
+    - Signature des statuts
+    - Publier un avis de constitution dans un journal d'annonces légales
+        - Obtenir une attestation de publication
+    - Déposer le dossier complet auprès du CFE
+    - Faire enregistrer quelques exemplaires originaux des status auprès du service des impôts
+
+## Aides, j'ai pas d'argent
+- Love money (famille, amis)
+- Réseau entreprendre / Scientipôle / etc (20k€ - 60k€)
+- OSEO
+- BPI (Banque Publique d'Investissement)
+- Business Angels (150k€ à 600k€)
+- Capital Risque (2M€ à 10M€)
+- Capital Dev (> 10M€)
+- Bourse (€€€)
+
+## Combien investir soit-même dans un projet?
+- Le moins possible. Il est plus intéressant de faire porter le risque financier par quelqu'un d'autre. On investi déjà beaucoup de temps dans le projet.
+- N'investir que des sommes qu'on peut perdre (la perte potentielle n'influe pas sur le niveau de vie)
+
+## Emprunt vs Crédit bail
+- Crédit bail (leasing) : ne s'appliques qu'aux bien physiques. la banque achète le bien à ma place et il lui appartient. Je lui verse des loyers jusqu'au moment où la somme couvre le bien. Je peux ensuite le racheter.
+    - Avantage
+        - Plus facile à obtenir car la banque est propriétaire
+        - Intérêts souvent plus faibles
+    - Dangers
+        - Impossible de faire un remboursement anticipé
+        - Le coût de rachat peut être important
+        - Si on rate une mensualité, le contrat est terminé (on perd tout)

@@ -1,3 +1,5 @@
+'use strict'
+
 Function.prototype.myCall = function() {
   return this.apply(arguments[0], Array.prototype.slice.apply(arguments, [1]))
 }
