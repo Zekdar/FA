@@ -1,18 +1,19 @@
 'use strict'
 
 function addX(x) {
-  return function (y) { return x + y }
+  return function (y) { 
+    return x + y 
+  }
 }
 
 const add5 = addX(5)
 
 console.log(add5(0), add5(37)) // prints "5 42"
 
-
 // buggy example
 for (var i = 0; i < 10; ++i) {
   setTimeout(function() {
-    console.log(i);
+    console.log(i)
   })
 }
 
