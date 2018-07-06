@@ -1,9 +1,7 @@
 function executeAll(fns) {
   return fns.reduce(function(acc, fn) {
     return function() {
-      console.log("je rentre dans l'accu")
       acc.call(this)
-      console.log("je sors de l'accu et j'esxecute la fonction accumulée")
       fn.call(this)
     }
   }, function() {})
