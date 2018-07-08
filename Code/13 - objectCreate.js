@@ -1,3 +1,5 @@
+'use strict'
+
 function myObjectCreate(obj) {
   var Constructor = function() {}
   Constructor.prototype = obj
