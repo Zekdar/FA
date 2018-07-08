@@ -10,7 +10,7 @@
 - SARL - contrat - ESN - contrat - CLIENT
 - Elle prend une commission sur le TJM (~20%)
 
-## Pourquoi faire appel à une SSII plutôt qu'à des freelances?
+## Pourquoi faire appel à une ESN plutôt qu'à des freelances?
 - Achat en gros, économies d'échelle
 - Certaines SSII garantissent que leurs consultants soient certifiés
 - Mise en place de grilles tarifaires

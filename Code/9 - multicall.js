@@ -1,3 +1,5 @@
+'use strict'
+
 function executeAll(fns) {
   return fns.reduce(function(acc, fn) {
     return function() {
