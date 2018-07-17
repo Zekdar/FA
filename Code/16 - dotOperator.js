@@ -1,3 +1,5 @@
+'use strict'
+
 // function myDot(obj, attr) {
 //   while (true) {
 //     if (!obj)
