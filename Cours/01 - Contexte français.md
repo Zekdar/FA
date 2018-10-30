@@ -21,7 +21,7 @@
     > Pour me permettre de démarrer avec les best practices et obtenir de meilleures perfs que tout seul. Etienne & Quentin car je leur fais confiance, je les connais depuis 1 an + à travers le meetup de Nodeschool.
 7. Pour devenir un freelance accompli et aller vers mon objectif à 2 ans, je pense que ce que je dois changer chez moi en priorité c'est [...]
     > Arrêter de procrastiner, lire des livres, ne plus rester inactif par peur du changement (habitudes, routine, peur de ne pas être à la hauteur)
-8. Si on doit me challenger pendnt le séminaire ce serait sur [...]
+8. Si on doit me challenger pendant le séminaire ce serait sur [...]
     > Sortir de ma zone de confort.
 
 # Contexte français
@@ -32,7 +32,7 @@
 - Impôts sur les sociétés
 - Impôts sur le revenu
 
-## Les entreprises
+## Les entreprisanes
 - Personne morale : l'entreprise a son compte en banque, ses droits et ses devoirs
 
 ## Securité sociale

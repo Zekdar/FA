@@ -1,0 +1,95 @@
+# Entretiens téléphoniques
+## 26/07/2018 10h00
+- SSII : TEK systems
+- Commerciale : Vithujah Saravanapavan
+- Localité : Plessi Robinson
+- TJM demandé : 700e
+- TJM proposé : 400e
+------
+## 10/09/2018
+- SSII : HR TEAM
+- Commerciale : Mélanie Denis
+- TJM demandé : 700e
+------
+- SSII : Oligos
+- Commerciale : Laetitia Toloton
+- Client : Club Med
+- Localité : Métro Corentin-Cariou
+- GraphQL / React 
+- TJM demandé : 700e
+------
+- SSII : Skillwise
+- Commerciale : ?
+------
+## 11/09/2018
+- SSII : Universe Technology
+- Commerciale : Thibaut Mougel
+- Client : dans le digital
+- Node.js
+- TJM demandé : 700e
+------
+- SSII : Degetel
+- Commerciale : Prescilia Almenteros
+- Client : Grand comptes
+- TJM demandé : 700e > trop cher (ils voulaient 500-550)
+------
+## 12/09/2018
+- SSII : PickMeUp
+- Commercial : Guillaume SCELLE (06 42 65 77 90)
+- Client : A vendre à Louer
+- TJM demandé : 700e
+- Technos : C#
+- Positionné chez le client
+------
+## 13/09/2018
+- SSII : EUROSTAFF
+- Commercial : Jeremy Daubresse (01 87 39 23 60)
+- Client : LOUVRE HÔTELS
+- TJM demandé : 700e
+- Technos : C# / GraphQL / React
+- Positionné chez le client
+------
+- SSII : James Data Factory
+- Client : Renault (Plessi Robinson)
+- TJM demandé : 700e
+- TJM proposé : 550-600e max
+- Technos : Node / Angular4
+------
+- SSII : Entourage
+- Commercial : Sami Sanam
+- Client : Éditeur logiciel
+- TJM demandé : 700e
+- TJM proposé : 550e
+- Technos : Node / React
+------
+- SSII : Smarteo
+- Commercial : LOL
+- Technos : C
+------
+## 18/09/2018
+- SSII : AMETIX (groupe La Poste)
+- Commercial : 
+- Client : 
+- TJM demandé : 700e
+- Technos : Node / React
+- #malaise : https://www.youtube.com/watch?v=jiZnHUGX9JI
+----
+- SSII : Smarteo
+- Localisation : Lyon
+- Technos : C#
+----
+- SSII : ELA Technologie
+- Technos : C#
+----
+- SSII : Little Big Connection
+- Technos : Node
+----
+- SSII : High Team
+- Technos : C#
+----
+- SSII : Hays
+- Technos : Front (React / Vue / Angular)
+----
+## 19/09/2018
+- SSII : Pirson Franck
+- 
