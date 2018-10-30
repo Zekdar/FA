@@ -1,0 +1,83 @@
+algorithme chercher
+  constantes
+    TAILLE_MAX = 42
+  types
+    tableau_entiers = TAILLE_MAX entier
+    liste = enregistrement
+      tableau_entiers valeurs
+      entier taille
+    fin enregistrement liste
+    liste_ptr = ↑liste
+
+  variables
+    liste_ptr liste
+    entier i
+  
+  algorithme fonction recherche: entier
+    parametres locaux
+      liste_ptr liste
+      entier search
+    variables
+      entier i
+    debut
+    pour i ← 1 jusqu'a liste↑.taille faire
+      si liste↑.valeurs[i] = search alors
+        retourne(i)
+      fin si    
+    fin pour
+
+    retourne(0)
+  fin algorithme fonction recherche
+
+  algorithme fonction recherche_dicho: entier
+    parametres locaux
+      liste_ptr liste
+      entier search
+    variables
+      entier i, half
+      entier searchPosition, start, end
+    debut
+      start ← 1
+      end ← liste↑.taille
+
+      tant que start <= end faire
+        searchPosition ← start + (end - start) div 2
+        
+        si liste↑.valeurs[searchPosition] = search alors
+          retourne(searchPosition)
+        fin si
+
+        si liste↑.valeurs[searchPosition] < search alors
+          /* droite */
+          start ← searchPosition + 1
+        sinon
+          /* gauche */
+          end ← searchPosition - 1
+        fin si
+      fin tant que
+
+      retourne(0)
+  fin algorithme fonction recherche_dicho
+debut
+  allouer(liste)
+  liste↑.taille ← 10
+  pour i ← 1 jusqu'a 10 faire
+    liste↑.valeurs[i] ← i * 5
+  fin pour
+
+  afficher(chaine(recherche(liste, 13)) + "\n") /* affiche 0 */
+  afficher(chaine(recherche(liste, 25)) + "\n") /* affiche 5 */
+
+  afficher(chaine(recherche_dicho(liste, 15)) + "\n") /* affiche 3 */
+  afficher(chaine(recherche_dicho(liste, 23)) + "\n") /* affiche 0 */
+  afficher(chaine(recherche_dicho(liste, 35)) + "\n") /* affiche 7 */
+
+  pour i <- 1 jusqu'a 10 faire
+    liste↑.valeurs[i] ← (11 - i) * 5
+  fin pour
+
+  afficher(chaine(recherche_dicho(liste, 23)) + "\n") /* affiche 0 */
+  afficher(chaine(recherche_dicho(liste, 35)) + "\n") /* affiche 0 : liste triée a l'envers */
+
+  liberer(liste)
+fin algorithme chercher
