@@ -1,0 +1,68 @@
+algorithme suppression
+  constantes
+    TAILLE_MAX = 42
+  types
+    tableau_entiers = TAILLE_MAX entier
+    liste = enregistrement
+      tableau_entiers valeurs
+      entier taille
+    fin enregistrement liste
+    liste_ptr = ↑liste
+  variables
+    liste_ptr liste
+    entier i
+
+  algorithme procedure supprimer_fin
+    parametres locaux
+      liste_ptr liste
+  debut
+    liste↑.taille ← liste↑.taille - 1
+  fin algorithme procedure supprimer_fin
+
+  algorithme procedure supprimer
+    parametres locaux
+      liste_ptr liste
+      entier position
+    variables
+      entier tmp
+      entier i
+  debut
+    pour position ← jusqu'a liste↑.taille faire
+      si position < liste↑.taille - 1 alors
+        liste↑.valeurs[position] ← liste↑.valeurs[position + 1]
+      fin si
+    fin pour
+
+    liste↑.taille ← liste↑.taille - 1
+  fin algorithme procedure supprimer
+debut
+  allouer(liste)
+
+  pour i ← 1 jusqu'a 10 faire
+    liste↑.valeurs[i] ← i
+  fin pour
+  liste↑.taille ← 10
+
+  supprimer_fin(liste)
+  supprimer_fin(liste)
+  
+  /* affiche "1 2 3 … 7 8" */
+  pour i ← 1 jusqu'a liste↑.taille faire
+    afficher(chaine(liste↑.valeurs[i]) + ' ')
+  fin pour
+  afficher("\n")
+
+  supprimer(liste, 2)
+  supprimer(liste, 2)
+  supprimer(liste, 4)
+  supprimer(liste, 42) /* ne fait rien */
+  supprimer(liste, 5)
+  
+  /* affiche "1 4 5 7" */
+  pour i ← 1 jusqu'a liste↑.taille faire
+    afficher(chaine(liste↑.valeurs[i]) + ' ')
+  fin pour
+  afficher("\n")
+
+  liberer(liste)
+fin algorithme suppression

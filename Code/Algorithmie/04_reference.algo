@@ -1,0 +1,21 @@
+algorithme echanger_test
+  variables
+    entier i, j
+
+  algorithme procedure echanger
+    parametres globaux
+      entier k, l
+    variables
+      entier tmp
+  debut
+    tmp ← k
+    k ← l 
+    l ← tmp
+  fin algorithme procedure echanger
+
+debut
+  i ← 2
+  j ← 4
+  echanger(i, j)
+  afficher(chaine(i) + chaine(j) + '\n') /* prints 42 */
+fin algorithme echanger_test

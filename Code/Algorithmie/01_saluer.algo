@@ -1,0 +1,11 @@
+algorithme premiersPas
+  algorithme procedure saluer
+    parametres locaux
+      chaine nom
+  debut
+    afficher("Salut " + nom + " !")
+  fin algorithme procedure saluer
+
+debut
+  saluer("Julien")
+fin algorithme premiersPas

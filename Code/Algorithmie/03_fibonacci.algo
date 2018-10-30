@@ -1,0 +1,38 @@
+algorithme fibo
+  algorithme fonction fibo_rec: entier
+    parametres locaux
+      entier n
+  debut
+    si n = 0 alors
+      retourne(0)
+    fin si
+    
+    si n = 1 alors
+      retourne(1)
+    fin si
+
+    retourne(fibo_rec(n - 1) + fibo_rec(n - 2))
+  fin algorithme fonction fibo_rec
+
+  algorithme fonction fibo_ite: entier
+    parametres locaux
+      entier n
+    variables
+      entier i, j, res, steps
+  debut
+    i ← 0
+    j ← 1
+    res ← 0
+
+    pour steps ← 2 jusqu'a n faire
+      res ← i + j
+      i ← j
+      j ← res
+    fin pour
+
+    retourne(res)
+  fin algorithme fonction fibo_ite
+debut
+  afficher(chaine(fibo_rec(12)) + '\n') /*caffiche 144 */
+  afficher(chaine(fibo_ite(18)) + '\n') /* affiche 2584 */
+fin algorithme fibo

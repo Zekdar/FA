@@ -1,0 +1,100 @@
+algorithme insertion
+  constantes
+    TAILLE_MAX = 42
+  types
+    tableau_entiers = TAILLE_MAX entier
+    liste = enregistrement
+      tableau_entiers valeurs
+      entier taille
+    fin enregistrement liste
+    liste_ptr = ↑liste
+  variables
+    liste_ptr liste
+    entier i
+
+  algorithme procedure ajout_fin
+    parametres locaux
+      liste_ptr liste
+      entier valeur
+  debut
+    si liste↑.taille < TAILLE_MAX alors
+      liste↑.taille ← liste↑.taille + 1
+      liste↑.valeurs[liste↑.taille] ← valeur
+    fin si
+  fin algorithme procedure ajout_fin
+
+  algorithme procedure inserer
+    parametres locaux
+      liste_ptr liste
+      entier pos
+      entier valeur
+  variables
+      entier tmp
+  debut
+    tmp ← valeur
+    pour pos ← pos jusqu'a liste↑.taille + 1 faire
+      tmp ← liste↑.valeurs[pos]
+      liste↑.valeurs[pos] ← valeur
+      valeur ← tmp
+    fin pour
+    liste↑.taille ← liste↑.taille + 1
+  fin algorithme procedure inserer
+
+  algorithme procedure suppression
+    /* … */
+    variables
+      liste_ptr liste
+      entier i
+    /* … */
+  debut
+    allouer(liste)
+
+    /* allouons une liste crade pour tester */
+    pour i ← 1 jusqu'a 10 faire
+      liste↑.valeurs[i] ← i
+    fin pour
+    liste↑.taille ← 10
+
+    supprimer_fin(liste)
+    supprimer_fin(liste)
+
+    /* affiche "1 2 3 … 7 8" */
+    pour i ← 1 jusqu'a liste↑.taille faire
+      afficher(chaine(liste↑.valeurs[i]) + ' ')
+    fin pour
+    afficher("\n")
+
+    liberer(liste)
+  fin algorithme procedure suppression
+debut
+  allouer(liste)
+  liste↑.taille ← 0
+
+  ajout_fin(liste, 2)
+  ajout_fin(liste, 5)
+  ajout_fin(liste, 7)
+  ajout_fin(liste, 66)
+
+  /* affiche "2 5 7 66" */
+  pour i ← 1 jusqu'a liste↑.taille faire
+    afficher(chaine(liste↑.valeurs[i]) + ' ')
+  fin pour
+  afficher("\n")
+
+  liberer(liste)
+  allouer(liste)
+
+  /* à ajouter après les tests actuels */
+  inserer(liste, 2, 33)
+  inserer(liste, 2, 28)
+  inserer(liste, 5, 9)
+  inserer(liste, 42, 42)
+
+  /* affiche "2 28 33 5 9 7 66 42" */
+  pour i ← 1 jusqu'a liste↑.taille faire
+    afficher(chaine(liste↑.valeurs[i]) + ' ')
+  fin pour
+  afficher("\n")
+
+  liberer(liste)
+fin algorithme insertion

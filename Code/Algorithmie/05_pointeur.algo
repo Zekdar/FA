@@ -1,0 +1,28 @@
+algorithme echanger_ptr_test
+  types
+    entier_ptr = ↑entier
+
+  variables
+    entier_ptr i, j
+
+  algorithme procedure echanger_ptr
+    parametres locaux
+      entier_ptr i, j
+    variables 
+      entier tmp
+    debut
+    tmp ← i↑
+    i↑ ← j↑
+    j↑ ← tmp
+  fin algorithme procedure echanger_ptr
+
+debut
+  allouer(i)
+  allouer(j)
+  i↑ ← 2
+  j↑ ← 4
+  echanger_ptr(i, j)
+  afficher(chaine(i↑) + chaine(j↑) + '\n') /* prints 42 */
+  liberer(i)
+  liberer(j)
+fin algorithme echanger_ptr_test
