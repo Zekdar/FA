@@ -1,0 +1,90 @@
+algorithme file
+  constantes
+    TAILLE_MAX = 42
+  types
+    tableau_entiers = TAILLE_MAX entier
+    file = enregistrement
+      tableau_entiers valeurs
+      entier premier, taille
+    fin enregistrement file
+    file_ptr = ↑file
+  variables
+    file_ptr file
+
+  algorithme fonction nouvelle_file:file_ptr
+  variables
+    file_ptr file
+  debut
+    allouer(file)
+    file↑.taille ← 0
+    file↑.premier ← 1
+    retourne(file)
+  fin algorithme fonction nouvelle_file
+
+  algorithme fonction file_vide: booleen
+  parametres locaux
+    file_ptr file
+  debut
+    retourne(file↑.taille = 0)
+  fin algorithme fonction file_vide
+
+  algorithme procedure enfiler
+  parametres locaux
+    file_ptr file
+    entier valeur
+  variables
+    entier pos
+  debut
+    pos ← ((file↑.taille + file↑.premier) mod TAILLE_MAX) + 1
+    file↑.valeurs[pos] <- valeur
+    file↑.taille ← file↑.taille + 1
+  fin algorithme procedure enfiler
+
+  algorithme fonction defiler: entier
+  parametres locaux
+    file_ptr file
+  variables
+    entier tmp
+  debut
+    tmp ← file↑.valeurs[file↑.premier] 
+    file↑.premier ← ((file↑.premier + 1) mod TAILLE_MAX) + 1
+    file↑.taille ← file↑.taille - 1
+    retourne(tmp)
+  fin algorithme fonction defiler
+
+  algorithme procedure afficher_file
+    parametres locaux
+      file_ptr file
+    variables
+      entier i, pos
+  debut
+    afficher("file(")
+
+    pour i ← 0 jusqu'a file↑.taille - 1 faire
+      pos ← (file↑.premier + i - 1) mod TAILLE_MAX + 1
+      afficher(chaine(file↑.valeurs[pos]))
+      si i <> file↑.taille - 1 alors
+        afficher(",")
+      fin si
+    fin pour
+
+    afficher(")\n")
+  fin algorithme procedure afficher_file
+
+debut
+  file ← nouvelle_file()
+
+  enfiler(file, 32)
+  enfiler(file, 54)
+  afficher_file(file) /* affiche file(32,54) */
+  afficher(chaine(defiler(file)) + '\n') /* affiche 32 */
+  afficher(chaine(defiler(file)) + '\n') /* affiche 54 */
+  afficher_file(file) /* affiche file() */
+  enfiler(file, 22)
+  defiler(file)
+  enfiler(file, 21)
+  enfiler(file, 42)
+  afficher_file(file) /* affiche file(21, 42) */
+
+  liberer(file)
+fin algorithme file

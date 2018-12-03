@@ -1,0 +1,86 @@
+algorithme insertion_triee
+  constantes
+    TAILLE_MAX = 42
+  types
+    tableau_entiers = TAILLE_MAX entier
+    liste = enregistrement
+      tableau_entiers valeurs
+      entier taille
+    fin enregistrement liste
+    liste_ptr = ↑liste
+  variables
+    liste_ptr liste
+    entier i
+
+  algorithme procedure inserer
+    parametres locaux
+      liste_ptr liste
+      entier pos
+      entier valeur
+    variables
+      entier tmp
+  debut
+    tmp ← valeur
+    pour pos ← pos jusqu'a liste↑.taille + 1 faire
+      tmp ← liste↑.valeurs[pos]
+      liste↑.valeurs[pos] ← valeur
+      valeur ← tmp
+    fin pour
+    liste↑.taille ← liste↑.taille + 1
+  fin algorithme procedure inserer
+
+  algorithme procedure inserer_tri 
+    parametres locaux
+      liste_ptr liste
+      entier valeur
+    variables
+      booleen continuer
+      entier position
+    debut
+      i ← 1
+      continuer ← vrai
+
+      tant que i <= liste↑.taille et continuer faire
+        si valeur <= liste↑.valeurs[i] alors
+          inserer(liste, i, valeur)
+          continuer ← faux
+        fin si
+
+        si i = liste↑.taille et valeur >= liste↑.valeurs[i] alors
+          inserer(liste, i + 1, valeur)
+          continuer ← faux
+        fin si
+
+        i ← i + 1
+      fin tant que
+  fin algorithme procedure inserer_tri
+
+  algorithme procedure afficher_liste
+    parametres locaux
+      liste_ptr liste
+    variables
+      entier i
+
+  debut
+    pour i ← 1 jusqu'a liste↑.taille faire
+      afficher(chaine(liste↑.valeurs[i]) + " ")
+    fin pour
+    afficher("\n")
+  fin algorithme procedure afficher_liste
+  /* … */
+debut
+  allouer(liste)
+  liste↑.taille ← 3
+  pour i ← 1 jusqu'a 3 faire
+    liste↑.valeurs[i] ← i * 5
+  fin pour
+
+  inserer_tri(liste, 8)
+  inserer_tri(liste, 25)
+  inserer_tri(liste, 15)
+  inserer_tri(liste, 2)
+
+  afficher_liste(liste) /* affiche 2 5 8 10 15 15 25 */
+
+  liberer(liste)
+fin algorithme insertion_triee
